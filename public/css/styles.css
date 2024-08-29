@@ -1,0 +1,365 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transition: 0.8s linear;
+}
+
+
+#skeleton-listings .listing-skeleton {
+  margin-bottom: 1rem;
+}
+
+.skeleton-img, .skeleton-text {
+  background: #e0e0e0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.skeleton-text{
+  z-index: 20;
+}
+
+.skeleton-img::after, .skeleton-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100% !Important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: loading 0.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+      left: -100%;
+  }
+  50% {
+      left: 100%;
+  }
+  100% {
+      left: 100%;
+  }
+}
+
+
+
+.airbnb_home {
+  font-family: "Lato";
+  margin: 0.24rem 1rem 0 0;
+  font-weight: bolder !important;
+}
+
+#openModalBtn {
+  height: 2.9rem;
+  width: 6rem;
+  border-radius: 25px;
+  background-color: white !important;
+  border: none;
+  padding: 0.6rem 0.8rem 1.3rem 0 !important;
+  transition: 0.8s linear;
+  border: 1px solid grey;
+}
+
+#openModalBtn:hover {
+  box-shadow: 0px 3px 3px rgb(214, 214, 214);
+}
+
+/* The modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 74vw !important;
+  width: 20% !important; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  padding-top: 4.5rem; /* Location of the box */
+}
+
+/* Modal Content */
+.modal-content {
+  /* background-color: #fefefe; */
+  font-size: 2rem !important;
+  padding: 15px;
+  border: 1px solid #888;
+  width: 50px; /* Width of the box */
+  box-shadow: 0px -3px 3px rgba(214, 211, 211, 0.1) !important;
+}
+
+.modal-content ul a:hover{
+ background-color: #f3f3f3;
+}
+
+
+.bars {
+  font-size: 1.4rem !important ;
+}
+
+/* Close Button */
+.modal-content ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.icon-user {
+  font-size: 1.7rem;
+  color: grey;
+  margin-left: 0.7rem;
+}
+
+.nav-logout{
+  margin-top: 0.2rem;
+  font-family: 'Lato';
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+.main-heading {
+  margin: 2rem 0;
+}
+
+.navbar-brand {
+  margin-right: 0.35rem !important;
+  color: #fe424b !important;
+  font-size: 2.5rem !important;
+}
+
+#navbar-main-brand {
+  font-weight: bolder;
+  color: #fe424b !important;
+  font-weight: 800;
+  font-size: 1.15rem !important;
+  font-family: "Lato";
+}
+
+/* custom styling of navbar */
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+/* styling the app icon */
+.fa-compass {
+  color: #fe424b;
+  font-size: 2rem;
+}
+
+/* styling the navbar links */
+.nav-link {
+  color: #222222 !important;
+  font-size: 0.9rem !important;
+}
+
+/* Styling the Footer */
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+
+/* Styling the Footer links on hover */
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+/* Styling the Footer div */
+.f-info {
+  text-align: center;
+  height: 8rem;
+  display: flex;
+  background-color: rgb(176, 175, 175);
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* All divs Occupying 100% of width of screen  */
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Giving syles to social media icons */
+.f-info-socials i {
+  font-size: 1.2rem;
+  margin-right: 0.8rem;
+}
+
+/* Styling card */
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem; /* Set the width of the card */
+  height: 400px; /* Set a fixed height for the card */ /* Add margin around the card */
+  overflow: hidden;
+  font-family: "Lato";
+}
+
+.card-img-top {
+  height: 250px !important;
+  object-fit: cover !important;
+}
+
+.card img {
+  border-radius: 1rem !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text {
+  font-weight: 500 !important;
+  font-size: 0.9rem;
+}
+
+.listing-link {
+  text-decoration: none;
+}
+
+.card-heart {
+  position: relative;
+  z-index: 1;
+  bottom: 14.5rem;
+  left: 14rem;
+  font-size: 1rem !important ;
+  color: white !important;
+}
+
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+/* New Page design */
+
+.description {
+  height: 1rem !important;
+}
+
+.add-btn {
+  border: none !important;
+  background-color: #fe424b !important;
+}
+
+.description-edit {
+  height: 4rem !important;
+}
+
+.show-img {
+  height: 30vh;
+}
+
+.btns {
+  display: flex;
+  margin-left: 2rem;
+}
+
+.delete {
+  margin-left: 1rem;
+}
+
+#map {
+  height: 300px;
+  width: 50vw;
+}
+
+.filter {
+  margin-top: 2rem;
+  text-align: center;
+  margin-right: 2rem;
+  opacity: 0.7;
+  padding-bottom: 0.5rem !important;
+}
+
+.filter:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center !important;
+  position: fixed;
+  transition: height 0.3s;
+  background-color: white;
+  z-index: 1;
+  margin-left: 0;
+  width: 92%;
+  padding: 0 0 1rem 1rem;
+  /* box-shadow: 0 3px 3px rgb(209, 208, 208), 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent; */
+}
+
+.filter p {
+  font-size: 0.8rem;
+}
+
+.tax-info {
+  display: none;
+}
+.tax-toggle {
+  margin-top: 0.45rem;
+  border: 1px solid rgb(186, 186, 186);
+  border-radius: 1rem;
+  height: 3rem;
+  padding: 0.8rem 1rem 2rem 1rem;
+  margin-left: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.search-btn,
+.search-btn:hover {
+  background-color: #fe424d !important;
+  color: white;
+  border-radius: 50% !important;
+  position: relative !important;
+  right: 41px !important;
+  top: 1px;
+  height: 2.5rem !important
+}
+
+.search-btn i {
+  display: inline;
+  color: white;
+  background-color: #fe424b;
+}
+
+.search-inp {
+  margin-right: 0px !important;
+  border-radius: 25px !important;
+  padding: 0.5rem 2.5rem !important;
+  position: relative !important;
+  z-index: -2;
+}
+
+.search-btn,.search-inp{
+  box-shadow: 0 1px 2px rgb(186, 186, 186);
+}
+
+
+.fade-off {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.fade-off.hide {
+  display: none;
+}

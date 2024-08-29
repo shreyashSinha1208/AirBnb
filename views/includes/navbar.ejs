@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid" style="margin-left: 3.5rem;">
+    <a class="navbar-brand" href="/listings"><i class="fa-brands fa-airbnb"></i></a>
+    <a class="nav-link" id="navbar-main-brand" href="/listings">wanderLust</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+
+      </div>
+    </div>
+    <div class="navbar-nav ms-auto search-fn">
+      <form class="d-flex" role="search" action="/listings/search" method="post">
+        <div class="input-group">
+          <input class="form-control search-inp" name="search" type="search" placeholder="Search destinations"
+            aria-label="Search">
+          <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
+        </div>
+      </form>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto" style="margin-right: 3.2rem;">
+        <a class="nav-link airbnb_home" href="/listings/new">Airbnb Your Home</a>
+        <% if(!currUser) { %>
+            <!-- Button to trigger the modal -->
+            <button id="openModalBtn"><i class="fa-solid fa-circle-user icon-user"></i><i class="fa-solid fa-bars icon-user bars"></i></button>
+            <!-- The modal -->
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <ul>
+                  <a class="nav-link" href="/signup"><b>SignUp</b></a>
+                  <a class="nav-link" href="/login">Login</a>
+                  <hr>
+                  <a href="/listings/new" class="nav-link">Airbnb Your Home</a>
+                </ul>
+              </div>
+          </div>
+          <% } %>
+          <% if(currUser) { %>
+            <!-- Button to trigger the modal -->
+            <button id="openModalBtn"><i class="fa-solid fa-circle-user icon-user"></i><i class="fa-solid fa-bars icon-user bars"></i></button>
+            <!-- The modal -->
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <ul>
+                  <li class="nav-link"><b>Hello, <%=currUser.username%></b> </li>
+                  <a class="nav-link nav-logout" href="/logout">Logout</a>
+                </ul>
+              </div>
+          </div>
+          <% } %>
+
+            
+              
+      </div>
+    </div>
+  </div>
+</nav>
+
